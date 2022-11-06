@@ -20,6 +20,11 @@
       font-family: 'Barlow Semi Condensed';
     }
 
+    .main {
+      width: 100%;
+      background-color: hsl(0, 0%, 100%);
+    }
+
     .attribution {
       font-size: 11px;
       text-align: center;
@@ -28,96 +33,192 @@
     .attribution a {
       color: hsl(228, 45%, 44%);
     }
+
+    .content-box {
+      box-sizing: border-box;
+      border-radius: 10px;
+      padding: 25px 30px;
+    }
+
+    .container-first .worker img {
+      border-radius: 200px;
+      border: 2px solid hsl(263, 55%, 65%);
+      margin-right: 1.5rem;
+      width: 40px;
+      height: 40px;
+    }
+
+    .container-second .worker img {
+      border-radius: 200px;
+      border: 2px solid hsl(217, 19%, 35%);
+      margin-right: 1.5rem;
+      width: 40px;
+      height: 40px;
+    }
+
+    .container-first {
+      background-color: hsl(263, 55%, 52%);
+      position: relative;
+    }
+
+    .container-first svg {
+      position: absolute;
+      right: 2rem;
+    }
+
+    .container-first .worker {
+      line-height: 5px;
+      text-align: left;
+      margin-bottom: 20px;
+      display: flex;
+      z-index: 10;
+    }
+
+    .container-second .worker {
+      line-height: 5px;
+      text-align: left;
+      margin-bottom: 20px;
+      display: flex;
+    }
+
+    .text-container .bold-text {
+      position: relative;
+      z-index: 10;
+      color: hsl(0, 0%, 100%);
+      font-weight: 600;
+      font-size: 1.65rem;
+      margin-bottom: 20px;
+      line-height: 25px;
+    }
+
+    .text-container .normal-text {
+      color: hsl(0, 0%, 81%, 50%);
+      font-weight: 500;
+      font-size: 1.15rem;
+      line-height: 19px;
+    }
+
+    .worker-box .worker-name {
+      color: hsl(0, 0%, 81%);
+      font-weight: 600;
+    }
+
+    .worker-box .worker-position {
+      color: hsl(0, 0%, 81%, 50%);
+      font-weight: 500;
+    }
+    .container-second {
+      background-color: hsl(217, 19%, 35%);
+    }
+
+    @media screen and(max-width:375px) {}
   </style>
 </head>
 
 <body>
-  <div class="container-first">
-    <p>Daniel Clifford</p>
-    <p>Verified Graduate</p>
+  <main class="main">
+    <div class="content-box container-first">
+      <svg width="104" height="102" xmlns="http://www.w3.org/2000/svg"><path d="M104 102V59.727H84.114c0-5.871.689-11.182 2.068-15.933 1.379-4.75 3.42-9.287 6.125-13.61C95.01 25.86 98.909 22.257 104 19.375V0c-9.758 4.27-17.712 9.874-23.864 16.813-6.151 6.939-10.712 14.545-13.681 22.818C63.485 47.904 62 59.941 62 75.74V102h42zm-62 0V59.727H22.114c0-5.871.689-11.182 2.068-15.933 1.379-4.75 3.42-9.287 6.125-13.61C33.01 25.86 36.909 22.257 42 19.375V0c-9.652 4.27-17.58 9.874-23.784 16.813C12.01 23.752 7.424 31.358 4.455 39.631 1.485 47.904 0 59.941 0 75.74V102h42z" fill="#A775F1" fill-rule="nonzero"/></svg>
+      <div class="worker">
+        <img src="/images/image-daniel.jpg" alt="Daniel Clifford image">
+        <section class="worker-box">
+          <p class="worker-name">
+            Daniel Clifford
+          </p>
+          <p class="worker-position">
+            Verified Graduate
+          </p>
+        </section>
+      </div>
 
-    <section>
-      <article>
-        I received a job offer mid-course, and the subjects I learned were current, if not more so,
-        in the company I joined. I honestly feel I got every penny’s worth.
-      </article>
+      <section class="text-container">
+        <article class="bold-text">
+          I received a job offer mid-course, and the subjects I learned were current, if not more so,
+          in the company I joined. I honestly feel I got every penny’s worth.
+        </article>
 
-      <article>
-        “ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a
-        transition and have heard some people who had an amazing experience here. I signed up
-        for the free intro course and found it incredibly fun! I enrolled shortly thereafter.
-        The next 12 weeks was the best - and most grueling - time of my life. Since completing
-        the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”
-      </article>
-    </section>
-  </div>
+        <article class="normal-text">
+          “ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a
+          transition and have heard some people who had an amazing experience here. I signed up
+          for the free intro course and found it incredibly fun! I enrolled shortly thereafter.
+          The next 12 weeks was the best - and most grueling - time of my life. Since completing
+          the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”
+        </article>
+      </section>
+    </div>
 
-  <div class="container-second">
-    <p>Jonathan Walters</p>
-    <p>Verified Graduate</p>
+    <div class="content-box container-second">
+      <div class="worker">
+        <img src="/images/image-jonathan.jpg" alt="Jonathan Walter picture">
+        <section class="worker-box">
+          <p class="worker-name">Jonathan Walters</p>
+          <p class="worker-position">Verified Graduate</p>
+        </section>
+      </div>
 
-    <section>
-      <article>The team was very supportive and kept me motivated</article>
+      <section class="text-container">
+        <article class="bold-text">The team was very supportive and kept me motivated</article>
 
-      <article>
-        “ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer
-        for a big company. This was one of the best investments I’ve made in myself. ”
-      </article>
-    </section>
-  </div>
+        <article class="normal-text">
+          “ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer
+          for a big company. This was one of the best investments I’ve made in myself. ”
+        </article>
+      </section>
+    </div>
 
-  <div class="container-third">
-    <p>Jeanette Harmon</p>
-    <p>Verified Graduate</p>
+    <div class="content-box container-third">
+      <p>Jeanette Harmon</p>
+      <p>Verified Graduate</p>
 
-    <section>
-      <article>An overall wonderful and rewarding experience</article>
+      <section>
+        <article>An overall wonderful and rewarding experience</article>
 
-      <article>
-        “ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living
-        while doing something I love. ”
-      </article>
-    </section>
-  </div>
+        <article>
+          “ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living
+          while doing something I love. ”
+        </article>
+      </section>
+    </div>
 
-  <div class="container-fourth">
-    <p>Patrick Abrams</p>
-    <p>Verified Graduate</p>
+    <div class="content-box container-fourth">
+      <p>Patrick Abrams</p>
+      <p>Verified Graduate</p>
 
-    <section>
-      <atrticle>
-        Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and
-        learning from their experiences was easy.
-      </atrticle>
+      <section>
+        <atrticle>
+          Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and
+          learning from their experiences was easy.
+        </atrticle>
 
-      <article>
-        “ The staff seem genuinely concerned about my progress which I find really refreshing. The program
-        gave me the confidence necessary to be able to go out in the world and present myself as a capable
-        junior developer. The standard is above the rest. You will get the personal attention you need from
-        an incredible community of smart and amazing people. ”
-      </article>
-    </section>
-  </div>
+        <article>
+          “ The staff seem genuinely concerned about my progress which I find really refreshing. The program
+          gave me the confidence necessary to be able to go out in the world and present myself as a capable
+          junior developer. The standard is above the rest. You will get the personal attention you need from
+          an incredible community of smart and amazing people. ”
+        </article>
+      </section>
+    </div>
 
-  <div class="container-fifth">
-    <p>Kira Whittle</p>
-    <p>Verified Graduate</p>
+    <div class="content-box container-fifth">
+      <p>Kira Whittle</p>
+      <p>Verified Graduate</p>
 
-    <section>
-      <article>Such a life-changing experience. Highly recommended!</article>
+      <section>
+        <article>Such a life-changing experience. Highly recommended!</article>
 
-      <article>
-        “ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from
-        professionals who can help me learn programming step by step. I was encouraged to enroll by a former
-        student of theirs who can only say wonderful things about the program. The entire curriculum and staff
-        did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team
-        project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial
-        could ever have. In fact, I’ve often referred to it during interviews as an example of my developent
-        experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers.
-        100% recommend! ”
-      </article>
-    </section>
-  </div>
+        <article>
+          “ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from
+          professionals who can help me learn programming step by step. I was encouraged to enroll by a former
+          student of theirs who can only say wonderful things about the program. The entire curriculum and staff
+          did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team
+          project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial
+          could ever have. In fact, I’ve often referred to it during interviews as an example of my developent
+          experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers.
+          100% recommend! ”
+        </article>
+      </section>
+    </div>
+  </main>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
